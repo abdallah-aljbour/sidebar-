@@ -1,0 +1,32 @@
+[
+    {
+      "icon": "home-2.svg",
+      "text": "Home",
+      "link": "/"
+    },
+    {
+      "icon": "profile-2user.svg",
+      "text": "User Management",
+      "link": "/dashboard"
+    },
+    {
+      "icon": "hierarchy-square-3.svg",
+      "text": "Workflow Management",
+      "link": "/projects"
+    },
+    {
+      "icon": "receipt-search.svg",
+      "text": "Audit Trail",
+      "link": "/projects"
+    },
+    {
+      "icon": "arrange-square.svg",
+      "text": "Customer Transactions",
+      "link": "/projects"
+    },
+    {
+      "icon": "briefcase.svg",
+      "text": "Customer 360",
+      "link": "/projects"
+    }
+  ]

@@ -1,0 +1,40 @@
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+/* Apply font styles to the body */
+body {
+  font-family: "Cairo", "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  margin-left: 100px;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  margin-left: 326px;
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.sidebar-container.collapsed + .main-content {
+  margin-left: 108px;
+}
