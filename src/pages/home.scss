@@ -1,0 +1,48 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8DAE5;
+    border-radius: 12px;
+    padding: 19px 30px;
+    height: 41px;
+    gap: 10px;
+    background-color: #FFFFFF;
+    
+   
+}
+.left-navbar{
+    display: flex;
+    align-items: center
+}
+.Knowledge-Base{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.right-navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.right-navbar li {
+    cursor: pointer;
+}
+
+.right-navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+.empty{
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    height: 137px;
+    margin-top: 16px;
+}
+
+.toolBar{
+    display: flex;
+    justify-content: space-between;
+}

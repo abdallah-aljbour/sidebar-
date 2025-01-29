@@ -65,7 +65,7 @@ const Sidebar: React.FC = () => {
         <div className="sidebar-header">
           <div className="logo-text-container">
             <img src={arenaLogo} alt="Arena Logo" />
-            {!isCollapsed && <span>ARINA</span>}
+            {!isCollapsed && <span>ARENA</span>}
           </div>
           <img
             src={isCollapsed ? sidebarRight : sidebarLeft}
