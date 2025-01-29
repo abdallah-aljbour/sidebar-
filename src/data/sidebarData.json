@@ -17,16 +17,36 @@
     {
       "icon": "receipt-search.svg",
       "text": "Audit Trail",
-      "link": "/projects"
+      "link": "/pp"
     },
     {
       "icon": "arrange-square.svg",
       "text": "Customer Transactions",
-      "link": "/projects"
+      "link": "/pro"
     },
     {
       "icon": "briefcase.svg",
       "text": "Customer 360",
-      "link": "/projects"
+      "link": "/proj"
+    },
+    {
+      "icon": "user-octagon.svg",
+      "text": "Customer Onboarding",
+      "link": "/user"
+    },
+    {
+      "icon": "message-question.svg",
+      "text": "Complaints Management",
+      "link": "/questions"
+    },
+    {
+      "icon": "trade.svg",
+      "text": "Trade Finance",
+      "link": "/trade"
+    },
+    {
+      "icon": "personalcard.svg",
+      "text": "Lead Management",
+      "link": "/user"
     }
   ]

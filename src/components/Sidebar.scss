@@ -1,236 +1,7 @@
-// // Sidebar Main Container
-// .sidebar-container {
-//   display: flex;
-//   height: 972px;
-//   padding: 16px;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   gap: 28px;
-//   border-radius: 16px;
-//   background: #172554;
-//   width: 280px;
-//   transition: all 0.3s ease;
-  
-//   &.collapsed {
-//     width: 80px;
-    
-//     .sidebar-header {
-//       padding: 6px;
-//       justify-content: center;
-      
-//       .logo-text-container {
-//         width: auto;
-//         justify-content: center;
-//       }
-
-//       .menu-icon {
-//         position: absolute;
-//         left: 120px;
-//         fill: black;
-//       }
-//     }
-
-//     .sidebar-item {
-//       padding: 8px;
-//       justify-content: center;
-
-//       img {
-//         margin: 0;
-//       }
-//     }
-
-//     .dynamic-items-container {
-//       align-items: center;
-//     }
-//   }
-
-//   .sidebar-header {
-//       display: flex;
-//       padding: 6px 12px;
-//       justify-content: space-between;
-//       align-items: center;
-//       align-content: center;
-//       row-gap: 10px;
-//       align-self: stretch;
-//       flex-wrap: wrap;
-//       border-radius: 12px;
-//       background: #0C1A46;
-
-//     .logo-text-container {
-//       display: flex;
-//       width: 212px;
-//       align-items: flex-start;
-//       border-radius: 10.966px;
-//       gap: 8px;
-
-//       img {
-//           width: 39.78px;
-//           height: 42.087px;
-//           flex-shrink: 0;
-//       }
-
-//       span {
-//           color: var(--Blue-50, #EFF6FF);
-//           font-variant-numeric: lining-nums proportional-nums;
-//           font-family: Cairo, sans-serif;
-//           font-size: 29.241px;
-//           font-style: normal;
-//           font-weight: 500;
-//           line-height: 45.69px;
-      
-//           @supports (leading-trim: both) {
-//               leading-trim: both;
-//           }
-//           @supports (text-edge: cap) {
-//               text-edge: cap;
-//           }
-//       }
-//     }
-
-//     .menu-icon {
-//       width: 28px;
-//       height: 28px;
-//       flex-shrink: 0;
-//       cursor: pointer;
-//       transition: all 0.3s ease;
-//     }
-//     }
-  
-//     // Search Bar
-//     .search-bar {
-//         display: flex;
-//         padding: 8px 12px;
-//         justify-content: space-between;
-//         align-items: center;
-//         align-self: stretch;
-//         border-radius: 8px;
-//         background: rgba(239, 246, 255, 0.20);
-      
-//         .icon-container {
-//           position: absolute;
-//           right: -35px;
-//           top: 39px;
-      
-//           img {
-//             width: 20px;
-//             height: 20px;
-//           }
-//         }
-      
-//         .input-container {
-//           flex-grow: 1;
-//           margin: 0 12px;
-      
-//           input {
-//             font-variant-numeric: lining-nums proportional-nums;
-//             font-family: "Cairo", sans-serif;
-//             font-size: 16px;
-//             font-style: normal;
-//             font-weight: 500;
-//             line-height: 25px;
-//             width: 100%;
-//             color: #fff;
-//             background: transparent;
-//             border: none;
-//             outline: none;
-//             padding: 0;
-//           }
-      
-//           input::placeholder {
-//             color: #fff;
-//             opacity: 1;
-//           }
-//         }
-      
-//         .icons-container {
-//             display: flex;
-//             justify-content: flex-end;
-//             align-items: center;
-//             gap: 6px;
-         
-//             .icon-wrapper {
-//               display: flex;
-//               justify-content: center;
-//               align-items: center;          
-//             }
-//         }
-//     }
-  
-//     // Dynamic Items Container
-//     .dynamic-items-wrapper {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         align-items: flex-start;
-//         gap: 16px;
-//         flex: 1 0 0;
-//         width: 100%;
-//     }
-      
-//     // Dynamic Items Container
-//     .dynamic-items-container {
-//         display: flex;
-//         flex-direction: column;
-//         gap: 16px;
-//         width: 100%;
-//         flex: 1;
-//         overflow-y: auto;
-        
-//         .sidebar-item {
-//             display: flex;
-//             padding: 8px 12px;
-//             align-items: center;
-//             gap: 12px;
-//             border-radius: 8px;
-//             color: rgba(239, 246, 255, 0.80);
-//             cursor: pointer;
-//             transition: all 0.3s ease;
-//             position: relative;
-            
-//             &:hover {
-//               background: rgba(239, 246, 255, 0.10);
-//             }
-          
-//             &.active {
-//               background: rgba(239, 246, 255, 0.10);
-//               font-weight: 600;
-//             }
-          
-//             img {
-//               width: 24px;
-//               height: 24px;
-//             }
-          
-//             span {
-//               font-family: Cairo, sans-serif;
-//               font-weight: 500;
-//               font-size: 16px;
-//               line-height: 25px;
-//               color: rgba(239, 246, 255, 0.80);
-//               flex: 1;
-//             }
-          
-//             .plus-icon {
-//               display: flex;
-//               width: 20px;
-//               height: 20px;
-//               justify-content: center;
-//               align-items: center;
-//               margin-left: auto;
-              
-//               img {
-//                 width: 20px;
-//                 height: 20px;
-//               }
-//             }
-//         }
-//     }
-// }
-// Sidebar Main Container
 .sidebar-container {
   display: flex;
-  height: 972px;
-  width: 326px;
+  height: 100vh;
+  width: 294px;
   padding: 16px;
   flex-direction: column;
   align-items: flex-start;
@@ -246,8 +17,9 @@
   .top-container {
     display: flex;
     flex-direction: column;
-    width: 100%; // This ensures it takes full width of parent
+    width: 100%; 
     gap: 16px;
+    flex-shrink: 0;
   }
 
   .menu-title {
@@ -261,13 +33,13 @@
   }
   
   &.collapsed {
-    width: 108px;
+    width: 76px;
     
     .top-container {
       display: flex; 
       flex-direction: column; 
       width: 100%;
-      height: 124.71px; 
+      height: 200px; 
       gap: 16px;
     }
     
@@ -275,9 +47,10 @@
   .sidebar-header {
     padding: 6px 12px;
     justify-content: center;
-    width: 76px;
+    width: 52px;
     background: #0C1A46;
-    height: 68.71px; 
+    height: 56.71px; 
+
       
       .logo-text-container {
         width: auto;
@@ -286,15 +59,15 @@
 
       .menu-icon {
         position: absolute;
-        left: 143px;
+        left: 120px;
       }
     }
 
     .search-bar {
       padding: 8px;
       justify-content: center;
-      width: 76px;
-      height: 40px;
+      width: 52px;
+  height: 24px;
       border-radius: 8px;
       background: rgba(239, 246, 255, 0.20);
       padding: 8px 12px;
@@ -317,6 +90,7 @@
     .dynamic-items-container {
       align-items: center;
       padding-top: 58px;
+      padding-right: 2px;
     }
   }
 
@@ -331,9 +105,8 @@
     flex-wrap: wrap;
     border-radius: 12px;
     background: #0C1A46;
-    height: 68.71px;
-    width: 294px;
-    margin-bottom: 16px;
+    height: 56.71px;
+    width: 270px;
 
     .logo-text-container {
       display: flex;
@@ -382,8 +155,8 @@
     align-self: stretch;
     border-radius: 8px;
     background: rgba(239, 246, 255, 0.20);
-    width: 294px;
-    height: 41px;
+    width: 270px;
+    height: 25px;
     margin-bottom: 28px;
     
     .icon-container {
@@ -444,6 +217,8 @@
     gap: 16px;
     flex: 1 0 0;
     width: 100%;
+    min-height: 0;
+   
   }
   
   .dynamic-items-container {
@@ -453,6 +228,9 @@
     width: 100%;
     flex: 1;
     overflow-y: auto;
+    scrollbar-width: thin; // For Firefox
+    scrollbar-color: rgba(239, 246, 255, 0.3) transparent;
+   
     
     .sidebar-item {
       display: flex;
@@ -465,6 +243,7 @@
       transition: all 0.3s ease;
       position: relative;
       text-decoration: none;
+      
       
       &:hover {
         background: rgba(239, 246, 255, 0.10);
