@@ -1,33 +1,46 @@
-/* Hide Scroll on the Body */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap");
+
+/* Global Styles */
+html {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow globally */
+}
 body {
   font-family: "Cairo", "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  
-
-  overflow: hidden; 
+  width: 100%;
+  overflow-x: hidden;
 }
 
+/* Hide scrollbar but keep functionality */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 
+html {
+  scrollbar-width: none; /* Firefox */
+}
 
-/* App container and other styles */
-.app-container {
+/* .app-container {
   display: flex;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   position: relative;
-  margin-left: 2px;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-left: 0;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .main-content {
   flex: 1;
   margin-left: 12px;
   transition: margin-left 0.3s ease;
+  width: 100%;
 }
+.main-container {
+  width: 100%;
+} */

@@ -1,0 +1,49 @@
+.card {
+  width: 221px;
+  border-radius: 12px;
+  padding: 14px;
+  gap: 12px;
+  background-color: #ffffff;
+
+  &__icon-text {
+    font-family: Cairo;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+    color: #000000;
+  }
+}
+.card img {
+  width: 221.5px;
+  height: 122px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-family: Cairo;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #172554;
+}
+.card p {
+  font-family: Cairo;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #94a3b8;
+}
+.card__icon-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card__icon-container img {
+  width: 20px;
+  height: 20px;
+}
+.card__icons {
+  display: flex;
+  align-items: center;
+  gap: 49px;
+}
