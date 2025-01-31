@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
-import sidebarData from '../data/sidebarData.json';
-import './Sidebar.scss';
+import { useLocation, Link } from "react-router-dom";
+import sidebarData from "../data/sidebarData.json";
+import "./Sidebar.scss";
 
 // Import static assets
-import arenaLogo from '../assets/Arena-logo-icon.svg';
-import sidebarRight from '../assets/sidebar-right.svg';
-import sidebarLeft from '../assets/sidebar-left.svg';
-import searchIcon from '../assets/search-normal.svg';
-import cmdIcon from '../assets/Cmd.svg';
-import addIcon from '../assets/add.svg';
+import arenaLogo from "../assets/Arena-logo-icon.svg";
+import sidebarRight from "../assets/sidebar-right.svg";
+import sidebarLeft from "../assets/sidebar-left.svg";
+import searchIcon from "../assets/search-normal.svg";
+import cmdIcon from "../assets/Cmd.svg";
+import addIcon from "../assets/add.svg";
 
 interface SidebarDataItem {
   icon: string;
@@ -25,18 +24,20 @@ interface SidebarItemProps {
   isActive: boolean;
 }
 
+interface SidebarProps {
+  isCollapsed: boolean;
+  toggleSidebar: () => void;
+}
+
 const SidebarItem: React.FC<SidebarItemProps> = ({
   icon,
   text,
   link,
   isCollapsed,
-  isActive
+  isActive,
 }) => {
   return (
-    <Link
-      to={link}
-      className={`sidebar-item ${isActive ? 'active' : ''}`}
-    >
+    <Link to={link} className={`sidebar-item ${isActive ? "active" : ""}`}>
       <img src={icon} alt={text} />
       {!isCollapsed && (
         <>
@@ -50,16 +51,11 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   );
 };
 
-const Sidebar: React.FC = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, toggleSidebar }) => {
   const location = useLocation();
 
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
   return (
-    <div className={`sidebar-container ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className={`sidebar-container ${isCollapsed ? "collapsed" : ""}`}>
       <div className="top-container">
         {/* Sidebar header */}
         <div className="sidebar-header">
@@ -96,7 +92,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       {!isCollapsed && <div className="menu-title">Main Menu</div>}
-      
+
       {/* Dynamic Items Container */}
       <div className="dynamic-items-wrapper">
         <div className="dynamic-items-container">

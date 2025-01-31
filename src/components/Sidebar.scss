@@ -9,7 +9,10 @@
   border-radius: 16px;
   background: #172554;
   transition: all 0.3s ease;
-  height: calc(100vh - 41px);
+  height: calc(100vh - 39px);
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .top-container {
     display: flex;
@@ -55,7 +58,7 @@
       .menu-icon {
         position: absolute;
         left: 120px;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
       }
     }
 
@@ -222,8 +225,6 @@
     width: 100%;
     flex: 1;
     overflow-y: auto;
-    // scrollbar-width: thin; // For Firefox
-    // scrollbar-color: rgba(239, 246, 255, 0.3) transparent;
 
     .sidebar-item {
       display: flex;

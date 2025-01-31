@@ -2,45 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap");
 
 /* Global Styles */
-html {
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal overflow globally */
-}
+html,
 body {
-  font-family: "Cairo", "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  width: 100%;
+
   overflow-x: hidden;
 }
 
-/* Hide scrollbar but keep functionality */
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 html {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
-
-/* .app-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  margin-left: 0;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.main-content {
-  flex: 1;
-  margin-left: 12px;
-  transition: margin-left 0.3s ease;
-  width: 100%;
-}
-.main-container {
-  width: 100%;
-} */
