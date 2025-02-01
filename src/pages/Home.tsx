@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import CardGrid from "../components/CardGrid/CardGrid";
 import { CardData } from "../components/Card/types";
 import element from "../assets/element-3.svg";
@@ -18,6 +18,7 @@ import arrowRight1 from "../assets/Arrow - Right 2.svg";
 import arrowRight2 from "../assets/2 Arrow - Right.svg";
 import folder from "../assets/folder-2.svg";
 import note from "../assets/note-text.svg";
+import AddCollectionModal from "../components/NewCollectionModal";
 import "./Home.scss";
 
 interface HomeProps {
@@ -25,6 +26,8 @@ interface HomeProps {
 }
 
 const Home: FC<HomeProps> = ({ isCollapsed }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const cardsData: CardData[] = [
     {
       image: "/src/assets/Knowledge Base Thumbnil.svg",
@@ -161,7 +164,7 @@ const Home: FC<HomeProps> = ({ isCollapsed }) => {
               <img src={filter} alt="filter" />
               <span>Filter</span>
             </div>
-            <div className="addNew">
+            <div className="addNew" onClick={() => setIsModalOpen(true)}>
               <img src={add} alt="add" />
               <button>Add New</button>
             </div>
@@ -193,6 +196,12 @@ const Home: FC<HomeProps> = ({ isCollapsed }) => {
             </span>
           </div>
         </div>
+
+        {/* Add Collection Modal */}
+        <AddCollectionModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </div>
   );
