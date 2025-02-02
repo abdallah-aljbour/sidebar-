@@ -41,7 +41,10 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
         </div>
         <div className="collectionName">
           <span className="margin">
-            Collection Name <img src={infoCercile} alt="text" />
+            Collection Name<span className="star">*</span>{" "}
+            <span className="infoCercile">
+              <img src={infoCercile} alt="text" />
+            </span>
           </span>
           <div className="inputArena">
             <button className="button-with-icon">
@@ -53,7 +56,10 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
         </div>
         <div className="Description">
           <span className="margin">
-            Description <img src={infoCercile} alt="text" />
+            Description{" "}
+            <span className="infoCercile">
+              <img src={infoCercile} alt="text" />
+            </span>
           </span>
           <div className="DescriptionInput">
             <span className="DescriptionText">Description</span>
@@ -62,10 +68,16 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
         </div>
         <div className="mainTow">
           <span className="margin2">
-            Tag <img src={infoCercile} alt="text" />
+            Tag<span className="star">*</span>{" "}
+            <span className="infoCercile">
+              <img src={infoCercile} alt="text" />
+            </span>
           </span>
           <span className="acces2">
-            Access Level* <img src={infoCercile} alt="text" />
+            Access Level<span className="star">*</span>{" "}
+            <span className="infoCercile">
+              <img src={infoCercile} alt="text" />
+            </span>
           </span>
           <div className="towInput">
             <button className="buttonTow">
