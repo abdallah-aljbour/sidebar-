@@ -16,103 +16,41 @@ import arrowLeft from "../assets/2 Arrow - Left.svg";
 import arrowRight from "../assets/Arrow - Right 3.svg";
 import arrowRight1 from "../assets/Arrow - Right 2.svg";
 import arrowRight2 from "../assets/2 Arrow - Right.svg";
-import folder from "../assets/folder-2.svg";
-import note from "../assets/note-text.svg";
 import AddCollectionModal from "../components/NewCollectionModal";
 import "./Home.scss";
 
 interface HomeProps {
   isCollapsed: boolean;
+  isSubmenuOpen?: boolean;
 }
 
-const Home: FC<HomeProps> = ({ isCollapsed }) => {
+const Home: FC<HomeProps> = ({ isCollapsed, isSubmenuOpen = false }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const cardsData: CardData[] = [
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-    {
-      image: "/src/assets/Knowledge Base Thumbnil.svg",
-      title: "Collection Name",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icons: [
-        { image: folder, text: "12 Section" },
-        { image: note, text: "50 Article" },
-      ],
-    },
-  ];
+  const getContainerClass = () => {
+    let className = "home-container";
+    if (isCollapsed) {
+      className += " collapsed";
+    }
+    if (isSubmenuOpen) {
+      className += " submenu-open";
+    }
+    return className;
+  };
+
+  const cardsData: CardData[] = new Array(8).fill({
+    image: "/src/assets/Knowledge Base Thumbnil.svg",
+    title: "Collection Name",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    icons: [
+      { image: "/src/assets/folder-2.svg", text: "12 Section" },
+      { image: "/src/assets/note-text.svg", text: "50 Article" },
+    ],
+  });
 
   return (
-    <div className={`home-container ${isCollapsed ? "collapsed" : ""}`}>
+    <div className={getContainerClass()}>
       <div className="main-container">
         <div className="navbar">
           <div className="left-navbar">
@@ -143,7 +81,9 @@ const Home: FC<HomeProps> = ({ isCollapsed }) => {
             </ul>
           </div>
         </div>
+
         <div className="empty"></div>
+
         <div className="toolBar">
           <div className="toolBar-left">
             <div className="card-view">
@@ -172,6 +112,7 @@ const Home: FC<HomeProps> = ({ isCollapsed }) => {
         </div>
 
         <CardGrid cards={cardsData} />
+
         <div className="footer">
           <div className="footerText">
             <span>Showing on page 1 - 1 to 10</span>
@@ -197,7 +138,6 @@ const Home: FC<HomeProps> = ({ isCollapsed }) => {
           </div>
         </div>
 
-        {/* Add Collection Modal */}
         <AddCollectionModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

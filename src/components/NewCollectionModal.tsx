@@ -98,7 +98,6 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
           </div>
         </div>
 
-        {/* The lastBorder button inside modal-content */}
         <div className="lastBorder">
           <button>
             <img src={add} alt="add" />
