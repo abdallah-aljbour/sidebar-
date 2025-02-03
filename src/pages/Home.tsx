@@ -3,7 +3,7 @@ import CardGrid from "../components/CardGrid/CardGrid";
 import { CardData } from "../components/Card/types";
 import element from "../assets/element-3.svg";
 import row from "../assets/row-vertical.svg";
-import search from "../assets/search-normal.svg";
+import search from "../assets/search-normal-1.svg";
 import filter from "../assets/filter.svg";
 import add from "../assets/add.svg";
 import home from "../assets/Home.svg";
@@ -95,8 +95,12 @@ const Home: FC<HomeProps> = ({ isCollapsed, isSubmenuOpen = false }) => {
               <span>List View</span>
             </div>
             <div className="search">
-              <img src={search} alt="row view" />
-              <span>Search</span>
+              <img src={search} alt="search" />
+              <input
+                type="text"
+                placeholder="Search"
+                className="search-input"
+              />
             </div>
           </div>
           <div className="toolBar-right">

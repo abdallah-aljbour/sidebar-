@@ -47,11 +47,11 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
             </span>
           </span>
           <div className="inputArena">
-            <button className="button-with-icon">
-              <img src={text} alt="icon" className="button-icon" />
-              Arena
-              <img src={info} alt="icon" className="button-icon2" />
-            </button>
+            <div className="input-with-icons">
+              <img src={text} alt="icon" className="input-icon-left" />
+              <input type="text" placeholder="Arena" className="arena-input" />
+              <img src={info} alt="icon" className="input-icon-right" />
+            </div>
           </div>
         </div>
         <div className="Description">
@@ -62,8 +62,10 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
             </span>
           </span>
           <div className="DescriptionInput">
-            <span className="DescriptionText">Description</span>
-            <button className="DescriptionForm"></button>
+            <textarea
+              className="DescriptionForm"
+              placeholder="Description"
+            ></textarea>
           </div>
         </div>
         <div className="mainTow">
@@ -80,18 +82,22 @@ const NewCollectionModal: React.FC<NewCollectionModalProps> = ({
             </span>
           </span>
           <div className="towInput">
-            <button className="buttonTow">
-              <img src={category} alt="category" className="button-icon" />
-              placeholder
-            </button>
-            <div className="div2">
-              <button className="buttonTow2">
-                <div>
-                  <img src={sitting} alt="category" className="button-icon" />
-                  placeholder
-                </div>
-                <img src={arrow} alt="arrow" className="button-icon3" />
-              </button>
+            <div className="input-container">
+              <img src={category} alt="category" className="input-icon" />
+              <input
+                type="text"
+                className="inputTow"
+                placeholder="placeholder"
+              />
+            </div>
+            <div className="input-container">
+              <img src={sitting} alt="category" className="input-icon" />
+              <input
+                type="text"
+                className="inputTow"
+                placeholder="placeholder"
+              />
+              <img src={arrow} alt="arrow" className="input-icon-right" />
             </div>
           </div>
           <div className="upload">
