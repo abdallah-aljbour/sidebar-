@@ -82,35 +82,37 @@ const Home: FC<HomeProps> = ({ isCollapsed, isSubmenuOpen = false }) => {
           </div>
         </div>
 
-        <div className="empty"></div>
+        {/* <div className="empty"></div> */}
 
         <div className="toolBar">
-          <div className="toolBar-left">
-            <div className="card-view">
-              <img src={element} alt="card view" />
-              <span>Card View</span>
+          <div className="gap">
+            <div className="toolBar-left">
+              <div className="card-view">
+                <img src={element} alt="card view" />
+                <span>Card View</span>
+              </div>
+              <div className="row-view">
+                <img src={row} alt="row view" />
+                <span>List View</span>
+              </div>
+              <div className="search">
+                <img src={search} alt="search" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="search-input"
+                />
+              </div>
             </div>
-            <div className="row-view">
-              <img src={row} alt="row view" />
-              <span>List View</span>
-            </div>
-            <div className="search">
-              <img src={search} alt="search" />
-              <input
-                type="text"
-                placeholder="Search"
-                className="search-input"
-              />
-            </div>
-          </div>
-          <div className="toolBar-right">
-            <div className="filter-add">
-              <img src={filter} alt="filter" />
-              <span>Filter</span>
-            </div>
-            <div className="addNew" onClick={() => setIsModalOpen(true)}>
-              <img src={add} alt="add" />
-              <button>Add New</button>
+            <div className="toolBar-right">
+              <div className="filter-add">
+                <img src={filter} alt="filter" />
+                <span>Filter</span>
+              </div>
+              <div className="addNew" onClick={() => setIsModalOpen(true)}>
+                <img src={add} alt="add" />
+                <button>Add New</button>
+              </div>
             </div>
           </div>
         </div>
